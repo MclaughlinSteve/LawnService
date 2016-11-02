@@ -29,6 +29,9 @@ public class Application {
 	 */
 	public static void main(String[] args) {
 		
+		//TODO: This is just a driver. It currently doesn't do anything, but I left some
+		// commented out code for doing a few simple operations to interact with the DB.
+		
 //		LawnAreaController rla = new LawnAreaController();
 //		ContractController con_cont = new ContractController();
 		
@@ -43,12 +46,6 @@ public class Application {
 
 		//Delete all LAs
 		//rla.getLawnAreas().forEach((templa) -> rla.deleteLawnArea(templa)); 
-		
-		BoxAPIConnection api = new BoxAPIConnection("oCkCNgww2UJ8q0dXiKG2eg4gzFHP4ohi");
-		BoxFolder rootFolder = BoxFolder.getRootFolder(api);
-		for (BoxItem.Info itemInfo : rootFolder) {
-		    System.out.format("[%s] %s\n", itemInfo.getID(), itemInfo.getName());
-		}
 
 		System.exit(0);
 	}
